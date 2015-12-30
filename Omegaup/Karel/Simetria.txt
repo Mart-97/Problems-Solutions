@@ -1,0 +1,105 @@
+iniciar-programa
+define-nueva-instruccion gira(e) como repetir e veces gira-izquierda;
+     define-nueva-instruccion follow como inicio
+
+      si frente-libre entonces avanza sino inicio
+        mientras no orientado-al-sur hacer gira-izquierda;
+        apagate;
+      fin;
+
+    fin;
+
+    define-nueva-instruccion rally(posicion) como inicio
+           si si-es-cero(posicion) entonces  inicio
+           mientras frente-bloqueado hacer gira-izquierda;
+           sal-de-instruccion;
+           fin;
+           si derecha-bloqueada y frente-libre entonces   inicio
+           avanza;
+        si orientado-al-norte entonces inicio
+
+            rally(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(posicion)))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))));
+            follow;
+        fin sino inicio
+
+        si orientado-al-este entonces inicio
+
+            rally(sucede(posicion));
+           follow;
+        fin sino inicio
+
+        si orientado-al-sur entonces inicio
+
+            rally(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(posicion)))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))));
+           follow;
+          fin sino inicio
+
+
+        si orientado-al-oeste entonces inicio
+
+
+            rally(precede(posicion));
+         follow;
+        fin;
+        fin;
+        fin;
+        fin;
+
+
+        fin sino inicio
+          si derecha-libre entonces inicio
+            gira(3);
+            avanza;
+
+               si orientado-al-norte entonces inicio
+
+            rally(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(sucede(posicion)))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))));
+              follow;
+            gira(3);
+
+        fin sino inicio
+        si orientado-al-este entonces inicio
+
+
+            rally(sucede(posicion));
+             follow;
+          gira(3);
+
+        fin sino inicio
+        si orientado-al-sur entonces inicio
+
+            rally(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(precede(posicion)))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))));
+             follow;
+            gira(3);
+
+           fin sino inicio
+        si orientado-al-oeste entonces inicio
+
+
+            rally(precede(posicion));
+             follow;
+             gira(3);
+
+          fin;
+          fin;
+          fin;
+       fin;
+
+    fin sino inicio
+     mientras frente-bloqueado hacer gira-izquierda;
+     rally(posicion);
+     mientras frente-bloqueado hacer gira-izquierda;
+
+    fin;
+    fin;
+    fin;
+    inicia-ejecucion
+    si frente-bloqueado y derecha-bloqueada y izquierda-bloqueada entonces apagate;
+    mientras derecha-libre hacer gira-izquierda;
+    avanza;
+     si orientado-al-norte entonces   rally(100);
+     si orientado-al-este entonces rally(1);
+     mientras no orientado-al-norte hacer gira-izquierda;
+        apagate;
+    termina-ejecucion
+finalizar-programa
