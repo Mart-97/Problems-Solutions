@@ -1,0 +1,95 @@
+class program {
+    void turn(e) {
+     iterate(e) turnleft();
+    }
+    void end(k) {
+      orientate();
+      turn(3);
+      iterate(k) move();
+      turn(2);
+      if(frontIsClear)move(); turn(2);
+      turnoff();
+    }
+    void vuelve() {
+     while(notFacingSouth) turnleft();
+     while(frontIsClear) move();
+     turn(2);
+
+    }
+    void columna(k) {
+      vuelve();
+       turn(3);
+       if(frontIsClear) move(); else end(k);
+       turn(1);
+       while(frontIsClear&&notNextToABeeper) move();
+       comprueba(k);
+    }
+    void comprueba(k) {
+     iterate(k){
+    if(frontIsClear) move(); else {
+      columna(k);
+
+    }
+     }
+     if(frontIsClear) {
+      move();
+      while(notNextToABeeper&&frontIsClear) move();
+      if(nextToABeeper)  {
+       vuelve();
+       capitan(0);
+      } else {
+         columna(k);
+      }
+     } else {
+      columna(k);
+     }
+    }
+    void largo(k) {
+     if(notNextToABeeper) {
+      move();
+       largo(pred(k));
+     } else {
+      while(frontIsClear) move();
+      turn(1);
+      if(frontIsClear) move(); else end(k);
+      turn(1);
+      while(frontIsClear&&notNextToABeeper) move();
+      if(nextToABeeper)    comprueba(k) else {
+       turn(2);
+       while(frontIsClear) move();
+       turn(1);
+       if(frontIsClear) move(); else end(k);
+       turn(1);
+       comprueba(k);
+      }
+     }
+    }
+   void distancia(k) {
+    if(frontIsClear) {
+     move();
+     distancia(succ(k));
+    } else {
+    turn(2);
+     largo(k);
+    }
+   }
+ void capitan(k) {
+ while(notNextToABeeper&&frontIsClear) move();
+ if (nextToABeeper) distancia(k);
+ if(notNextToABeeper) columna(k);
+
+ }
+ void orientate() {
+   while(notFacingSouth) turnleft();
+  while(frontIsClear) move();
+  turn(3);
+  while(frontIsClear) move();
+  turn(3);
+ }
+program() {
+   orientate();
+  capitan(0);
+    turnoff();
+}
+
+}
