@@ -1,0 +1,46 @@
+var i: Int
+var j: Int
+var esprimo: Bool
+var root: Float
+var rand: Int
+var contador: Int
+var maximo: Int
+var minimo: Int
+esprimo = true
+contador = 0
+maximo = -1;
+ minimo = 2147483648
+var numbers = [Int]()
+for i = 0; i < 100; ++i {
+ 
+   rand = Int(arc4random_uniform(2147483648))
+      numbers.insert(rand, atIndex:i)
+      minimo = min(numbers[i],minimo);
+      maximo = max(maximo,numbers[i]);
+}
+
+for i=0; i<100; ++i {
+    root = sqrt(Float(numbers[i]))
+var newroot:Int = Int(root)
+    for( j=2; j<=newroot; ++j)
+    {
+      if numbers[i] % j == 0
+      {
+          esprimo = false;
+          break;
+      }
+    }
+  
+    if esprimo && numbers[i]>0
+    {
+        contador++
+    }
+      esprimo = true;
+}
+for i = 0; i < 100; ++i {
+ print(numbers[i])
+}
+
+print("Hay",contador,"numeros primos")
+print("El numero mas chico es",minimo)
+print("El numero mas grande es",maximo)
