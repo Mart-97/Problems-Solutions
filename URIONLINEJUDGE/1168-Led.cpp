@@ -17,7 +17,7 @@ int main(){
         for(int i = 0; i<(int)s.size(); i++){
             acum+=led[s[i]];
         }
-        printf("%d\n leds",acum);
+        printf("%d leds\n",acum);
     }
 
 return 0;
